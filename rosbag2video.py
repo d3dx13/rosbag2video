@@ -211,7 +211,6 @@ class RosVideoWriter():
         for topic, msg, t in bag.read_messages(connection_filter=self.filter_image_msgs, start_time=self.opt_start,
                                                end_time=self.opt_end):
             try:
-                print(msg.format, msg.format.find("jpeg")!= -1)
                 if msg.format.find("jpeg") != -1:
                     if msg.format.lower().strip() == "jpeg":
                         if self.opt_display_images:
